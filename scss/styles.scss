@@ -1,0 +1,26 @@
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/normalize';
+@import 'core/typography';
+@import 'core/classes';
+
+@import 'elements/buttons';
+@import 'elements/accordion';
+@import 'elements/forms';
+@import 'elements/slider';
+
+@import 'components/header';
+@import 'components/footer';
+
+@import 'blocks/intro';
+@import 'blocks/catalog';
+@import 'blocks/about';
+@import 'blocks/stages';
+@import 'blocks/socials';
+@import 'blocks/qna';
+@import 'blocks/feedback';
+
+
+body {
+    background-color: #323232;
+}

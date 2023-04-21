@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Futura PT';
+    src: local('Futura PT Light'), local('FuturaPT-Light'),
+        url('../fonts/FuturaPT-Light.ttf') format('truetype'),
+        url('../fonts/FuturaPT-Light.woff') format('woff'),
+        url('../fonts/FuturaPT-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-variant: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: local('Futura PT Medium'), local('FuturaPT-Medium'),
+        url('../fonts/FuturaPT-Medium.ttf') format('truetype'),
+        url('../fonts/FuturaPT-Medium.woff') format('woff'),
+        url('../fonts/FuturaPT-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: local('Kanit Regular'), local('Kanit-Regular'),
+        url('../fonts/Kanit-Regular.ttf') format('truetype'),
+        url('../fonts/Kanit-Regular.woff') format('woff'),
+        url('../fonts/Kanit-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: local('Kanit Medium'), local('Kanit-Medium'),
+        url('../fonts/Kanit-Medium.ttf') format('truetype'),
+        url('../fonts/Kanit-Medium.woff') format('woff'),
+        url('../fonts/Kanit-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+}
+
+body {
+    color: white;
+    font-family: 'Futura PT';
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: 'Kanit';
+    font-weight: 500;
+}
+
+a {
+    color: inherit;
+}

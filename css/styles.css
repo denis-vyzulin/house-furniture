@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+  --primary: #AC0D03;
+  --paragraph: #FEF6ED;
+}
+
+*,
+*::before,
+*::after {
+  z-index: inherit;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+  border: none;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: local("Futura PT Light"), local("FuturaPT-Light"), url("../fonts/FuturaPT-Light.ttf") format("truetype"), url("../fonts/FuturaPT-Light.woff") format("woff"), url("../fonts/FuturaPT-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+}
+@font-face {
+  font-family: "Futura PT";
+  src: local("Futura PT Medium"), local("FuturaPT-Medium"), url("../fonts/FuturaPT-Medium.ttf") format("truetype"), url("../fonts/FuturaPT-Medium.woff") format("woff"), url("../fonts/FuturaPT-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-variant: normal;
+}
+@font-face {
+  font-family: "Kanit";
+  src: local("Kanit Regular"), local("Kanit-Regular"), url("../fonts/Kanit-Regular.ttf") format("truetype"), url("../fonts/Kanit-Regular.woff") format("woff"), url("../fonts/Kanit-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+}
+@font-face {
+  font-family: "Kanit";
+  src: local("Kanit Medium"), local("Kanit-Medium"), url("../fonts/Kanit-Medium.ttf") format("truetype"), url("../fonts/Kanit-Medium.woff") format("woff"), url("../fonts/Kanit-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-variant: normal;
+}
+body {
+  color: white;
+  font-family: "Futura PT";
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: "Kanit";
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+}
+
+._container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+._btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 72px;
+  color: white;
+  font-weight: 400;
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  font-size: calc(20px + 4 * ((100vw - 320px) / 1120));
+  text-decoration: none;
+  background-color: var(--primary);
+  border-radius: 48px;
+}
+._btn__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  transition: color 0.3s, transform 0.3s;
+}
+._btn__rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 52px;
+  background-color: white;
+  border-radius: 48px;
+  transition: width 0.3s;
+}
+._btn__hidden {
+  opacity: 0;
+}
+._btn:hover ._btn__rectangle {
+  right: 0;
+  width: 100%;
+}
+._btn:hover ._btn__text {
+  color: var(--primary);
+  transform: translate(-50%, -50%);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content__logo {
+  max-width: 110px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.header-content__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.menu__item {
+  position: relative;
+  padding: 4px 35px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: calc(13px + 1 * ((100vw - 320px) / 1120));
+  transition: color 0.3s;
+}
+.menu__item::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background-color: white;
+  transition: left 0.3s, width 0.3s;
+}
+.menu__item:hover::before {
+  left: 35px;
+  width: calc(100% - 70px);
+}
+
+.navigation__btn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-left: 35px;
+  cursor: pointer;
+}
+.navigation__btn span {
+  display: block;
+  height: 1px;
+  width: 38px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.navigation__btn span:nth-child(2) {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.navigation__btn:hover span:nth-child(2) {
+  width: 24px;
+}
+.navigation__btn:hover span:last-child {
+  width: 30px;
+}
+
+.intro {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+.intro__heading {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  line-height: 0.8;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-size: calc(96px + 24 * ((100vw - 320px) / 1120));
+}
+
+.intro-description {
+  padding-top: 240px;
+}
+.intro-description__text {
+  color: var(--paragraph);
+  font-weight: 300;
+  line-height: 0.8;
+  font-size: calc(20px + 4 * ((100vw - 320px) / 1120));
+}
+.intro-description__btn {
+  margin-top: 70px;
+}
+
+body {
+  background-color: #323232;
+}
